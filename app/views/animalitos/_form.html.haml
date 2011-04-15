@@ -1,8 +1,9 @@
 = semantic_form_for @animalito do |f|
   = f.error_messages
   = f.inputs do
-    = f.input :name
+    = f.input :name, :hint => "Entre el nombre del propietario sino se proporciona"
     = f.input :born_on, :start_year => 1950
     = f.input :categoria, :include_blank => false
     = f.input :female, :as => :radio, :label => "Genero", :collection => [["Male", false], ["Female", true]]
+    = f.input :problemas, :as => :check_boxes
     =f.buttons

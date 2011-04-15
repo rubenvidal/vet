@@ -1,5 +1,12 @@
 Vet::Application.routes.draw do
-  resources :animalitos
+  resources :problemas
+
+  resources :animalitos do
+    member do
+      get 'show1'
+    end
+  end
+
 
   resources :categorias
 

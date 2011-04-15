@@ -1,0 +1,12 @@
+<% title "Problema" %>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @problema.nombre %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_problema_path(@problema) %> |
+  <%= link_to "Destroy", @problema, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", problemas_path %>
+</p>

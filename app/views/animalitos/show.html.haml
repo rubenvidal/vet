@@ -12,7 +12,9 @@
 %p
   %strong Female:
   = @animalito.female
-
+%p
+  %strong Problemas:
+  = @animalito.problemas.map{|a| a.nombre}.join(", ")
 %p
   = link_to "Edit", edit_animalito_path(@animalito)
   |
