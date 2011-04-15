@@ -1,0 +1,19 @@
+- title "Animalitos"
+
+%table
+  %tr
+    %th Name
+    %th Categoria
+    %th Born on
+    %th Female
+  - for animalito in @animalitos
+    %tr
+      %td= animalito.name
+      %td= animalito.categoria_id
+      %td= animalito.born_on
+      %td= animalito.female
+      %td= link_to 'Show', animalito
+      %td= link_to 'Edit', edit_animalito_path(animalito)
+      %td= link_to 'Destroy', animalito, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Animalito", new_animalito_path

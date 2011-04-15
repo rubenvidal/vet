@@ -1,4 +1,8 @@
 Vet::Application.routes.draw do
+  resources :animalitos
+
+  resources :categorias
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
