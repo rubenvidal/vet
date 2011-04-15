@@ -1,21 +1,5 @@
-- title "Animalito"
-
-%p
-  %strong Name:
-  = @animalito.name
-%p
-  %strong Categoria:
-  = @animalito.categoria_id
-%p
-  %strong Born On:
-  = @animalito.born_on
-%p
-  %strong Female:
-  = @animalito.female
-%p
-  %strong Problemas:
-  = @animalito.problemas.map{|a| a.nombre}.join(", ")
-%p
+= show_for @animalito do |a|
+  = a.attributes :name, :categoria_id, :born_on, :female, :problemas
   = link_to "Edit", edit_animalito_path(@animalito)
   |
   = link_to "Destroy", @animalito, :confirm => 'Are you sure?', :method => :delete

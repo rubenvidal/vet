@@ -8,6 +8,7 @@ gem 'formtastic', '~> 1.2.3'
 gem 'sqlite3'
 gem 'kaminari'
 gem 'haml-rails'
+gem 'show_for'
 #gem 'jquery-rails', '>= 0.2.6'
 group :development, :test do
   gem 'rspec-rails'

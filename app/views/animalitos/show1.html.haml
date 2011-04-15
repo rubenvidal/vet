@@ -1,0 +1,23 @@
+- title "Animalito"
+
+%p
+  %strong Name:
+  = @animalito.name
+%p
+  %strong Categoria:
+  = @animalito.categoria_id
+%p
+  %strong Born On:
+  = @animalito.born_on
+%p
+  %strong Female:
+  = @animalito.female
+%p
+  %strong Problemas:
+  = @animalito.problemas.map{|a| a.nombre}.join(", ")
+%p
+  = link_to "Edit", edit_animalito_path(@animalito)
+  |
+  = link_to "Destroy", @animalito, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", animalitos_path

@@ -7,6 +7,10 @@ class AnimalitosController < ApplicationController
     @animalito = Animalito.find(params[:id])
   end
 
+  def show1
+    @animalito = Animalito.find(params[:id])
+  end
+
   def new
     @animalito = Animalito.new
   end
